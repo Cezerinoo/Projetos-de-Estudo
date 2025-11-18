@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--back-color: #1A1B2F;
+	--primary-color: #392ccf;
+	--secondary-color: #7416ed;
+	--text-color: #494c4e;
+	--default-text-color: #fff;
+	--title-size: 1.8em;
+	--text-size: 0.8em;
+	--text-emphasis-size: 1.2em;
+	--text-logo-size: 1em;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	font-family: 'Montserrat', Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--back-color);
+}
+
+/* Nav Bar */
+#nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 1em 3em;
+	background: var(--primary-color);
+	border-bottom: 3px solid var(--secondary-color);
+}
+
+#nav-logo a{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	font-size: var(--text-logo-size);
+	color: var(--default-text-color);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#nav-logo img {
+	width: 60px;
+	height: auto;
+}
+
+#nav-links ul {
+	list-style: none;
+	display: flex;
+	gap: 2em;
+}
+
+#nav-links a,
+#nav-tools a {
+	font-size: var(--text-size);
+	color: var(--default-text-color);
+	text-decoration: none;
+	font-weight: 600;
+	transition: .3s ease;
+}
+
+#nav-tools a {
+	padding: 10px 15px;
+	border-radius: 10px;
+	border: 1px solid var(--default-text-color);
+}
+
+#nav-links a:hover {
+	border-bottom: 1px solid #CCC;
+	color: #CCC;
+}
+
+#nav-tools a:hover {
+	background: var(--back-color);
+	color: var(--default-text-color);
+	box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3);
+}
+
+#nav-tools {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+}
+
+#nav-form {
+	position: relative;
+}
+
+#nav-form input[type="text"] {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 5px 10px;
+	width: 100%;
+	height: 35px;
+	color: var(--secondary-color);
+}
+
+#nav-form button {
+	width: 20%;
+	height: 100%;
+	position: absolute;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	cursor: pointer;
+	background: var(--default-text-color);
+}
+
+#nav-form .fa-solid {
+	color: var(--secondary-color);
+}
+
+/* Main Content */
+
+.container {
+	display: flex;
+	max-width: 1100px;
+	margin: 15px auto;
+	border: 1px solid var(--secondary-color);
+	border-radius: 10px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.main-img-box,
+.main-content-box {
+	width: 50%;
+	padding: 10px;
+}
+
+/* Main Img */
+.main-img-box .img-principal {
+	width: 70%;
+	height: 300px;
+	background: url(img/kit-gold.png);
+	background-position: center;
+	background-size: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.list-img {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	width: 70%;
+	cursor: pointer;
+}
+
+.list-img .small-img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+
+.list-img .small-img:first-child {
+	border-bottom-left-radius: 10px;
+}
+.list-img .small-img:last-child {
+	border-bottom-right-radius: 10px;
+}
+
+.list-img .small-img:hover {
+	filter: brightness(70%);
+}
+
+/* Main text */
+.main-content-box {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.ref-text {
+	color: var(--text-color);
+	font-size: var(--text-size);
+}
+
+.product-info h1 {
+	font-size: var(--title-size);
+	color: var(--default-text-color);
+	font-weight: 600;
+}
+
+.price-text {
+	color: var(--secondary-color);
+	font-size: var(--title-size);
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.product-avaliation {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	color: var(--primary-color);
+}
+
+.product-desc {
+	font-size: var(--text-size);
+	color: var(--primary-color);
+}
+
+.product-form-select {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.form-text {
+	color: var(--default-text-color);
+	font-size: var(--text-size);
+	font-weight: 600;
+}
+
+.product-form-select select {
+	width: 50%;
+	padding: 5px 10px;
+}
+
+.product-form-btn {
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	margin-top: 10px;
+}
+
+.product-form-btn button {
+	padding: 10px 15px;
+	background: var(--secondary-color);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.cart-btn {
+	color: var(--default-text-color);
+}
+
+.product-form-btn .fav-btn {
+	background: none;
+	color: var(--secondary-color);
+	border: 1px solid var(--secondary-color);
+	transition: .3s ease;
+}
+
+.product-form-btn .fav-btn:hover {
+ 	box-shadow: 0 0 5px 1px #7416ed;
+ 	background: rgba(0, 0, 0, 0.5);
+ 	color: var(--default-text-color);
+}
+
+.product-security {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+}
+
+/* Aside Nav */
+#nav-aside {
+	display: flex;
+	gap: 2em;
+	padding: 15px 10px;
+}
+
+.nav-aside-link a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	text-decoration: none;
+	color: var(--primary-color);
+	font-size: var(--text-size);
+	padding: 10px;
+	border-radius: 10px;
+	font-weight: 500;
+	transition: .3s ease;
+}
+
+.nav-aside-link a:hover {
+	background: var(--primary-color);
+	color: var(--default-text-color);
+}
+
+aside .container {
+	flex-direction: column;
+}
+
+.desc-info {
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	border-top: 1px solid var(--secondary-color);
+	width: 100%;
+}
+
+.desc-info .ref-text {
+	color: #CCC;
+}
+
+.ref-text-bold {
+	font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+	#nav-container {
+		flex-direction: column;
+		gap: 1em;
+		padding: 1em;
+	}
+
+	#nav-links ul {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1em;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	.main-img-box, .main-content-box {
+		width: 100%;
+	}
+
+	.main-img-box .img-principal {
+		height: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.list-img {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+/* Celulares médios */
+@media (max-width: 768px) {
+	#nav-tools {
+		flex-direction: column;
+		gap: 0.5em;
+		width: 100%;
+	}
+
+	#nav-form input[type="text"] {
+		width: 80%;
+	}
+
+	#nav-form button {
+		width: 20%;
+	}
+}
+
+/* Celulares pequenos */
+@media (max-width: 425px) {
+
+	.product-form-btn {
+		flex-direction: column;
+	}
+
+	.product-form-btn button {
+		width: 100%;
+	}
+
+	#nav-aside {
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	.nav-aside-link a {
+		font-size: 0.8em;
+		width: 100%;
+		justify-content: flex-start;
+	}
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 340px) {
+	.list-img .small-img {
+		height: 80px;
+	}
+
+	#nav-logo a h1 {
+		font-size: 0.9em;
+	}
+}

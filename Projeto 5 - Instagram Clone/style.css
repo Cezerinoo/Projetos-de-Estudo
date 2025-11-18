@@ -1,0 +1,206 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-box: box-sizing;
+	border: 0;
+	font: 1em Arial, Helvetica, sans-serif;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+body {
+	background: #000;
+}
+
+/* Containers Area */
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+}
+
+#banner-container {
+	width: 50%;
+	text-align: right;
+}
+
+#form-container {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* Form Container */
+#logo {
+	padding: 10px 0;
+}
+
+#logo img {
+	width: 200px;
+	height: 70px;
+}
+
+#input-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+
+#input-area input {
+	width: 280px;
+	height: 40px;
+	background: #121212;
+	border: 1px solid #555555;
+	border-radius: 3px;
+	color: #CCC;
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+#input-area input::placeholder {
+	color: #CCC;
+}
+
+#input-area input[type="submit"] {
+	background: #3441AF;
+	color: #FFF;
+	border: 0;
+	border-radius: 5px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+/* Separator */
+
+#separator {
+	margin: 50px 0;
+	position: relative;
+}
+
+.line {
+	border-top: 1px solid #555555;
+	width: 300px;
+}
+
+#separator span {
+	position: absolute;
+	display: inline;
+	padding: 0 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #CCC;
+	top: -6px;
+	background-color: #000;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+/* Other Links */
+
+#facebook-login a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	text-decoration: none;
+}
+
+#facebook-login span {
+	color: #0095F6;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#facebook-login img {
+	width: 1em;
+}
+
+#forgot-pass {
+	margin: 20px 0;
+}
+
+#forgot-pass a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* Register area */
+
+#register-container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+#register-container p {
+	color: #FFF;
+	font-size: 14px;
+}
+
+#register-container a {
+	font-size: 14px;
+	color: #0095F6;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Footer */
+
+#footer-container {
+	text-align: center;
+	margin-top: 40px;
+}
+
+#footer-container ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	padding: 0 20px;
+}
+
+#footer-container a {
+	font-size: 11px;
+	text-decoration: none;
+	color: #555555;
+}
+
+#footer-container a:hover,
+#register-container a:hover,
+#forgot-pass a:hover,
+#facebook-login a:hover {
+	text-decoration: underline;
+}
+
+#facebook-login a:hover {
+	text-decoration-color: #0095F6;
+}
+
+#mark-area {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+#mark-area p {
+	color: #555555;
+	font-size: 12px;
+}

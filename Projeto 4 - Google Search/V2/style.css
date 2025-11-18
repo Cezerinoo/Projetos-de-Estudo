@@ -1,0 +1,484 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-box: box-sizing;
+	border: 0;
+	font: 1em Arial, Helvetica, sans-serif;
+}
+
+/* Search Area */
+
+#search-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	border-bottom: 1px solid #CCC;
+}
+
+#logo {
+	margin-left: 20px;
+	align-self: center;
+}
+
+#logo img {
+	width: 50%;
+	height: auto;
+	cursor: pointer;
+}
+
+#search-area {
+	display: flex;
+	flex-direction: column;
+}
+
+#search-input {
+	width: 700px;
+	position: relative;
+}
+
+#search-input input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+}
+
+#search-input ul {
+	list-style: none;
+	display: flex;
+	gap: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+
+#search-input li {
+	display: flex;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#search-input li:hover {
+	background-color: #CCC;
+}
+
+#search-tools-container {
+	margin-top: 15px;
+}
+
+#search-tools-container ul{
+	display: flex;
+	list-style: none;
+	gap: 15px;
+}
+
+#search-tools-container a {
+	color: #6C6C6C;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+/* Corpo do site */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 165px;
+  padding-right: 70px;
+  margin-top: 20px;
+}
+
+main {
+  flex: 2 1 0;
+  padding-right: 35px;
+}
+
+aside {
+  flex: 1 1 0;
+  min-width: 460px;
+  position: relative;
+}
+
+/* Search Result Box */
+
+.search-result-box {
+	border: 1px solid #CCC;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.search-result-header .ref-link {
+	font-size: 0.8em;
+	color: #6C6C6C;
+	font-weight: bold;
+}
+
+.search-result-header .title-link {
+	color: #1124BA;
+	font-size: 1.1em;
+	text-decoration: none;
+	display: block;
+	padding-top: 5px;
+}
+
+.info-link {
+	font-size: 0.8em;
+	color: #6C6C6C;
+	padding-top: 10px;
+}
+
+.list-info-link {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.list-info-link .info-link {
+  width: 50%;
+}
+
+.bold-info {
+	font-weight: bold;
+}
+
+.rel-link-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 15px;
+	gap: 15px;
+}
+
+.rel-link {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: #1124BA;
+}
+
+/* Gallery Area */
+
+#img-principal {
+	width: auto;
+	height: 200px;
+	border-top-left-radius: 10px;
+	cursor: pointer;
+}
+
+#gallery-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 305px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.img-gallery {
+  flex: 1 1 30%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* corta a imagem */
+  cursor: pointer;
+}
+
+.img-gallery:hover {
+	transform: scale(1.1);
+}
+
+.img-gallery#img1 {
+	background-image: url("../img/turing2.jpg");
+}
+.img-gallery#img2 {
+	background-image: url("../img/turing3.jpg");
+}
+.img-gallery#img3 {
+	background-image: url("../img/turing4.jpg");
+	border-top-right-radius: 10px;
+}
+.img-gallery#img4 {
+	background-image: url("../img/turing5.jpg");
+}
+.img-gallery#img5 {
+	background-image: url("../img/turing6.jpg");
+}
+.img-gallery#img6 {
+	background-image: url("../img/turing7.jpg");
+}
+
+.more-img-btn {
+	display: inline-block;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-decoration: none;
+	color: #FFF;
+	background: rgba(108, 108, 108, 0.5);
+	font-size: 14px;
+	transition: .5s ease;
+}
+
+.more-img-btn:hover {
+	background: rgba(181, 181, 181, 0.5);
+}
+
+/* Info Gallery */
+
+#gallery-name {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding: 10px;
+}
+
+#gallery-name h3 {
+	font-size: 1.6em;
+}
+
+.gallery-text {
+	font-size: 0.8em;
+	padding-top: 10px;
+	padding-left: 10px;
+	line-height: 1.3em;
+	color: #454343;
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Tablet grande */
+@media (max-width: 1024px) {
+  #search-input {
+    width: 100%; /* input ocupa largura disponível */
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  aside {
+    min-width: 320px;
+  }
+}
+
+/* Tablet pequeno / celular em paisagem */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* aside vai para baixo do main */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main {
+    padding-right: 0;
+  }
+
+  aside {
+    width: 100%;
+    min-width: auto;
+    margin-top: 20px;
+  }
+
+  #gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #img-principal {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #gallery-list {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-gallery {
+    flex: 1 1 30%;
+    min-height: 100px;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  #search-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #logo img {
+    width: 120px;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #search-input input {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  #search-tools-container ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .rel-link-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #gallery-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .img-gallery {
+    flex: 1 1 45%; /* 2 colunas no celular */
+    min-height: 80px;
+  }
+
+  .more-img-btn {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+  }
+}
+/* ================== MEDIA QUERIES ================== */
+
+/* Tablet grande */
+@media (max-width: 1024px) {
+  #search-input {
+    width: 100%; /* input ocupa largura disponível */
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  aside {
+    min-width: 320px;
+  }
+}
+
+/* Tablet pequeno / celular em paisagem */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* aside vai para baixo do main */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main {
+    padding-right: 0;
+  }
+
+  aside {
+    width: 100%;
+    min-width: auto;
+    margin-top: 20px;
+  }
+
+  #gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #img-principal {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #gallery-list {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .img-gallery {
+    flex: 1 1 30%;
+    min-height: 100px;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  #search-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #logo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #logo img {
+    width: 120px;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #search-input input {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  #search-tools-container ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .rel-link-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #gallery-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .img-gallery {
+    flex: 1 1 45%; /* 2 colunas no celular */
+    min-height: 80px;
+  }
+
+  .more-img-btn {
+    position: relative;
+    display: block;
+    margin: 10px auto;
+  }
+}

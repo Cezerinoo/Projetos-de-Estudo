@@ -1,0 +1,496 @@
+/* *****Reset padrão***** */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	height: auto;
+}
+
+/* ***** */
+
+/* *****Nav bar***** */
+
+nav {
+	display: flex;
+	padding: 15px 0;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1C2836;
+}
+
+nav #logo {
+	margin-left: 30px;
+}
+
+nav #logo img {
+	width: 100px;
+}
+
+nav #nav-items {
+	margin-right: 30px
+}
+
+nav #nav-items ul {
+	display: flex;
+	list-style: none;
+}
+
+nav #nav-items li {
+	padding: 0 30px;
+}
+
+nav #nav-items li a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1.05em;
+	transition: 1s ease-in-out;
+}
+
+nav #nav-items li a:hover {
+	color: #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+nav #nav-items a.nav-btn {
+	background-color: #A4AB35;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+nav #nav-items a.nav-btn:hover {
+	background-color: #636921;
+	border: 0;
+}
+
+
+/* ***** */
+
+/* ***** Main Banner ***** */
+
+#main-banner {
+	width: 100%;
+	height: 500px;
+	background: url('img/mainbanner.png') no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-bottom: 1px solid #767B28;
+}
+
+#main-banner h1 {
+	color: #FFF;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#main-banner p {
+	color: #DDD;
+	margin-top: 15px;
+	font-size: 1.2em;
+}
+
+/* ***** */
+
+/* ***** Specialites Area ***** */
+
+#specialties-area {
+	text-align: center;
+}
+
+#specialties-area h2,
+#plans-area h1 {
+	font-size: 1.6em;
+	padding: 20px 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#specialties-area p,
+#plans-area p {
+	font-size: 1.1em;
+	color: #4A4949;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 100px;
+	margin-top: 15px;
+}
+
+.specialties-box {
+	width: 300px;
+	text-align: center;
+	padding: 15px;
+	border: 1px solid #1F1F1F;
+	border-radius: 10px;
+}
+
+.specialties-box .fas {
+	font-size: 2.5em;
+	padding: 10px 0;
+}
+
+.specialties-box .fa-rocket {
+	color: #D63518;
+}
+
+.specialties-box .fa-shield-alt {
+	color: #556080;
+}
+
+.specialties-box .fa-comments {
+	color: #25AE88;
+}
+
+.specialties-box h3 {
+	font-size: 1.3em;
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+/* ***** */
+
+/* ***** Plans Area ***** */
+
+#plans-area {
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+	border-top: 1px solid #767B28;
+}
+
+.plan-box {
+	width: 200px;
+	border: 1px solid #1C2836;
+	border-radius: 10px;
+	margin-top: 50px;
+	position: relative; /* para o price-circle se posicionar relativo a este bloco */
+}
+
+.plan-box ul li{
+	list-style: none;
+	padding: 10px 0;
+}
+
+.price-circle {
+    position: absolute;
+    top: -50px; /* sobe metade da altura do círculo */
+    left: 50%;  /* centraliza horizontalmente */
+    transform: translateX(-50%); /* ajusta para o centro exato */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #A4AB35;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.plan-box ul li.plan-name {
+	padding-top: 60px;
+	background-color: #1C2836;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 7px 7px 0 0;
+}
+
+.plan-box ul li.btn {
+	padding: 15px 0;
+	background-color: #A4AB35;
+	border-radius: 0 0 7px 7px;
+	padding: 0;
+}
+
+.plan-box ul li.btn:hover {
+	background-color: #636921;
+	cursor: pointer;
+}
+
+.plan-box ul li a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding: 15px;
+}
+
+.recommended,
+.plan-box li.btn.recommended {
+	background-color: #D63518;
+}
+
+.fa-fire {
+	color: #D63518;
+	margin: 0 5px;
+}
+
+/* ***** */
+
+/* ***** Search Area ***** */
+
+#search-area {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
+	border-top: 1px solid #767B28;
+	border-bottom: 1px solid #767B28;
+	background: #1C2836;
+}
+
+#search-area h3 {
+	font-size: 1.3em;
+	padding: 10px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#search-area p {
+	color: #FFF;
+}
+
+#search-area input[type=text] {
+	width: 600px;
+	height: 50px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 0 15px;
+	border: 1px solid #767B28;
+	color: #A4AB35;
+}
+
+#search-area input[type=submit] {
+	margin-top: 10px;
+	width: 300px;
+	height: 50px;
+	background-color: #A4AB35;
+	border-radius: 10px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	border: 1px solid #636921;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+
+#search-area input[type=submit]:hover {
+	background-color: #636921;
+	transform: scale(1.02);
+}
+
+/* ***** */
+
+/* ***** Contact Area ***** */
+
+#contact-area {
+	text-align: center;
+	margin-top: 30px;
+}
+
+#contact-area h3 {
+	font-size: 1.3em;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#contact-area p {
+	color: #1F1F1F;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	border-bottom: 1px solid #767B28;
+}
+
+.form-container input {
+	width: 300px;
+	padding: 10px;
+	height: 50px;
+	border: 1px solid #767B28;
+	color: #A4AB35;
+}
+
+.form-container textarea {
+	display: block;
+	resize: none;
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #767B28;
+	height: 150px;
+	padding: 10px;
+	color: #A4AB35;
+}
+
+.form-container input[type=submit] {
+	border-radius: 10px;
+	background-color: #A4AB35;
+	margin-top: 10px;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.form-container input[type=submit]:hover {
+	background-color: #767B28;
+	transform: scale(1.02);
+	color: #ccc;
+}
+
+/* ***** */
+
+/* ***** Footer ***** */
+
+footer{
+	text-align: center;
+	background-color: #1C2836;
+}
+footer span {
+	display: block;
+	padding: 20px 0;
+	color: #FFF;
+	font-weight: bold;
+}
+
+
+/* ***** */
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* Tablets e telas menores que 1024px */
+@media (max-width: 1024px) {
+    nav #nav-items ul {
+        gap: 10px;
+    }
+    nav #nav-items li {
+        padding: 0 15px;
+    }
+    #search-area input[type=text] {
+        width: 80%;
+    }
+    #search-area input[type=submit] {
+        width: 60%;
+    }
+}
+
+/* Celulares grandes e médios (até 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+    nav #logo {
+        margin-left: 0;
+    }
+    nav #nav-items {
+        margin-right: 0;
+        width: 100%;
+    }
+    nav #nav-items ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    nav #nav-items li {
+        padding: 10px 0;
+    }
+
+    #main-banner {
+    	min-height: 700px; /* melhor usar min-height que height fixa */
+        padding: 60px 20px; /* adiciona mais espaço interno */
+    }
+
+    .flex-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #search-area input[type=text] {
+        width: 90%;
+    }
+    #search-area input[type=submit] {
+        width: 80%;
+    }
+
+    .plan-box {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    .specialties-box {
+    	width: 80%;
+    	margin: 0 auto;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    nav #logo img {
+        width: 80px;
+    }
+    #main-banner {
+        min-height: 600px;
+        padding: 50px 15px;
+    }
+    #main-banner h1 {
+        font-size: 1.5em;
+    }
+    #main-banner p {
+        font-size: 1em;
+    }
+
+    .specialties-box {
+        width: 90%;
+    }
+
+    .price-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9em;
+        top: -40px;
+    }
+
+    #search-area input[type=text],
+    #search-area input[type=submit],
+    .form-container input,
+    .form-container textarea {
+        width: 95%;
+        margin: 5px auto;
+    }
+}

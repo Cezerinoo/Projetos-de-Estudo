@@ -1,0 +1,387 @@
+/* ==========  */
+/* Reset padrão */
+/* ==========  */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	height: auto;
+}
+
+/* ***** */
+
+/* ==========  */
+/* Side Bar Tools */
+/* ==========  */
+
+#sidebar {
+	width: 400px;
+	border-right: 1px solid #555759;
+	height: 100vh;
+	float: left;
+}
+
+#sidebar #sidebar-tools-container {
+	width: 100%;
+	background: #EEE;
+	height: 70px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.user-photo {
+	width: 50px;
+	position: absolute;
+	left: 15px;
+	background: #FFF;
+	border-radius: 50%;
+}
+
+#sidebar #sidebar-tools-container ul {
+	width: 100px;
+	position: absolute;
+	right: 15px;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#sidebar #sidebar-tools-container a {
+	color: #555759;
+	transition: .5s ease;
+}
+
+#sidebar #sidebar-tools-container a:hover {
+	color: #80868A;
+}
+
+/* ==========  */
+/* Side Bar Notification */
+/* ==========  */
+
+#sidebar #notification-container {
+	width: 100%;
+	height: 100px;
+	background: #9DE1FE;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#sidebar #notification-container .icon-notification {
+	width: 50px;
+	height: 50px;
+	background: #FFF;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+}
+
+#sidebar #notification-container .icon-notification .fa-solid {
+	color: #555759;
+}
+
+#sidebar .info-container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	text-align: center;
+}
+
+#sidebar .info-container h3 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #1f1f1f;
+}
+
+#sidebar .info-container p {
+	color: #555759;
+	font-size: 0.8em;
+}
+
+#sidebar .info-container .fa-solid {
+	color: #384c56;
+	font-size: 1.5em;
+	margin-left: 10px;
+	border-radius: 50%;
+	border: 2px solid #384c56;
+	transition: .5s ease;
+}
+
+#sidebar .info-container .fa-solid:hover {
+	color: #80868A;
+	border-color: #80868A;
+}
+
+/* ==========  */
+/* Side Bar Search */
+/* ==========  */
+
+#search-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+
+#search-container input {
+	width: 90%;
+	font-size: 0.9em;
+	height: 30px;
+	padding: 0 10px;
+	border-radius: 10px;
+	border: 1px solid #80868A;
+	color: #80868A;
+}
+
+#search-container .fa-solid {
+	color: #FFF;
+	background: #09D261;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 30px;
+	width: 30px;
+	margin-left: -15px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 0.8em;
+}
+
+/* ==========  */
+/* Side Bar Contacts */
+/* ==========  */
+
+#contact-container {
+	width: 100%;
+}
+
+.contact-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+	cursor: pointer;
+}
+
+.active {
+	background: #EEE;
+}
+
+.contact-box:hover {
+	background: #EEE;
+}
+
+.contact-box .contact-photo {
+	width: 50px;
+	height: 50px;
+	background: #FFF;
+	border-radius: 50%;
+	margin-left: 15px;
+}
+
+.contact-box .contact-info p {
+	padding: 2px 0;
+	text-align: center;
+}
+
+.contact-box .contact-info .contact-name {
+	color: #1f1f1f;
+	font-size: 1.1em;
+}
+
+.contact-box .contact-info .message-preview {
+	color: #80868A;
+	font-size: 0.9em;
+}
+
+.contact-box .message-info p {
+	padding: 2px 0;
+}
+
+.contact-box .message-info {
+	margin-right: 15px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.contact-box .message-info .message-time {
+	color: #1f1f1f;
+	font-size: 0.8em;
+}
+
+.contact-box .message-info .message-pending {
+	color: #FFF;
+	background: #09D261;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+/* ==========  */
+/* Chat Nav */
+/* ==========  */
+
+
+#chat-container {
+	width: calc(100% - 400px);
+	float: left;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column; /* empilha os filhos */
+}
+
+#chat-container #chat-navbar {
+	position: relative;
+	width: 100%;
+	background: #EEE;
+	height: 70px;
+	display: flex;
+	align-items: center;
+}
+
+#chat-container #chat-navbar .user-photo {
+	position: static;
+	margin-left: 15px;
+}
+
+#chat-container #chat-navbar .contact-info {
+	margin-left: 15px;
+}
+
+#chat-container #chat-navbar ul {
+	width: 200px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+	margin-left: auto; /* empurra a lista para a direita */
+}
+
+#chat-container #chat-navbar ul li a {
+	color: #555759;
+	transition: .5s ease;
+}
+
+#chat-container #chat-navbar ul li a:hover {
+	color: #80868A;
+}
+
+/* ==========  */
+/* Chat Messages */
+/* ==========  */
+
+#message-container {
+	width: 100%;
+	height: 100%;
+	background: url(img/background_whats.png);
+	background-size: 250px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow-y: auto;
+	padding: 10px;
+}
+
+/* Área de mensagens */
+.chat-messages {
+	width: 100%;
+	display: flex;
+	flex-direction: column; /* mensagens empilhadas */
+	gap: 8px; /* espaçamento entre mensagens */
+}
+
+/* Mensagens do convidado */
+.chat-messages p.guest-msg {
+	align-self: flex-start;  /* esquerda */
+	background: white;
+	padding: 10px 15px;
+	max-width: 200px;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+
+/* Mensagens do usuário */
+.chat-messages p.user-msg {
+	align-self: flex-end;    /* direita */
+	background: #dcf8c6;     /* verde claro tipo WhatsApp */
+	padding: 10px 15px;
+	max-width: 200px;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+
+
+/* ==========  */
+/* Chat Send Message */
+/* ==========  */
+
+#sendmessage-container {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f0f0f0; /* corzinha parecida com o zap */
+	box-sizing: border-box;
+	flex-shrink: 0; /* altura fixa */
+}
+
+.message-bar {
+	position: relative;
+	flex: 1; /* faz o input crescer */
+}
+
+.message-bar input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	padding: 10px 50px 10px 15px; /* espaço pros ícones à direita */
+	border-radius: 20px;
+	font-size: 14px;
+	box-sizing: border-box;
+	background: white;
+}
+
+.message-bar ul {
+	list-style: none;
+	position: absolute;
+	display: flex;
+	gap: 10px;
+	top: 0;
+	right: 10px;
+	transform: translateY(50%);
+}
+
+.message-bar ul li a {
+	color: #555759;
+}
+
+#micro {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #09D261;
+}
+
+#micro a {
+	color: #FFF;
+}
