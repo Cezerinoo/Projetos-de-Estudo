@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Youtube_Music_icon.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>YouTube Music</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav id="nav-container">
+            <div id="nav-logo">
+                <button class="nav-btn" onclick="showOrRemoveMenu()"><i class="fa-solid fa-bars"></i></button>
+                <img src="img/Youtube_Music_icon.svg.png" alt="">
+            </div>
+
+            <form id="search-area">
+                <input type="text" placeholder="Pesquise sua música...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div id="nav-tools">
+                <button class="nav-btn" id="search-btn-hidden"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="nav-btn"><i class="fa-solid fa-share-from-square"></i></button>
+                <button class="nav-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <button id="login-btn">Fazer Login</button>
+            </div>
+        </nav>
+
+        <div class="content-container">
+            <aside id="side-bar-container">
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Início
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-compass"></i>
+                    Explorar
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Biblioteca
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-upload"></i>
+                    Upgrade
+                </a>
+            </aside>
+
+            <!-- <aside id="hidden-menu">
+                <div id="hidden-menu-links">
+                    <a class="hidden-menu-link" href="#">
+                        <i class="fa-solid fa-house"></i>
+                        Início
+                    </a>
+                    <a class="hidden-menu-link"  href="#">
+                        <i class="fa-regular fa-compass"></i>
+                        Explorar
+                    </a>
+                    <a class="hidden-menu-link" href="#">
+                        <i class="fa-solid fa-bookmark"></i>
+                        Biblioteca
+                    </a>
+                    <a class="hidden-menu-link" href="#">
+                        <i class="fa-solid fa-upload"></i>
+                        Upgrade
+                    </a>
+                </div>
+
+                <hr>
+
+                <button id="new-playlist-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Nova Playlist
+                </button>
+            </aside> -->
+
+            <main id="main-container">
+                <div id="music-type-container">
+                    <a href="#" class="music-option-link">Podcasts</a>
+                    <a href="#" class="music-option-link">Energia</a>
+                    <a href="#" class="music-option-link">Festas</a>
+                    <a href="#" class="music-option-link">Para treinar</a>
+                    <a href="#" class="music-option-link">Relax</a>
+                    <a href="#" class="music-option-link">Romance</a>
+                    <a href="#" class="music-option-link">Positividade</a>
+                    <a href="#" class="music-option-link">Para ouvir no trânsito</a>
+                    <a href="#" class="music-option-link">Triste</a>
+                    <a href="#" class="music-option-link">Foco</a>
+                    <a href="#" class="music-option-link">Para dormir</a>
+                </div>
+
+                <div class="music-options-area">
+                    <div class="music-options-tools-container">
+                        <h2>Lançamentos</h2>
+                        <div class="back-next-content">
+                            <a href="#">Mais</a>
+                            <i class="fa-solid fa-chevron-left" onclick="LeftScroll(this)"></i>
+                            <i class="fa-solid fa-chevron-right" onclick="RightScroll(this)"></i>
+                        </div>
+                    </div>
+                    <div class="music-content-container">
+                        <div class="music-content-info">
+                            <img src="img/m&kenvolvente.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Envolvente (Ao vivo)</h3>
+                                <span>Álbum •</span>
+                                <span>Matheus e Kauan</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/luanOlhoMarrom.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>OLHO MARROM</h3>
+                                <span>Álbum •</span>
+                                <span>Luan Santana</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/ninguemPodeSaber.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Ninguém Pode Saber</h3>
+                                <span>Single •</span>
+                                <span>CountryBeat e Ana Castela</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/tubaroes.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Tubarões</h3>
+                                <span>Álbum •</span>
+                                <span>Diego & Victor Hugo</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/princesa.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Princesa (Ao Vivo)</h3>
+                                <span>Single •</span>
+                                <span>Gustavo Mioto e Ana Castela</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/suaBocaMente.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Zé Felipe Sua Boca Mente (You're Still The One)</h3>
+                                <span>Álbum •</span>
+                                <span>Zé Felipe e Ana Castela</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/vagabundo.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Vagabundo</h3>
+                                <span>Single •</span>
+                                <span>Gusttavo Lima e Luis Fonsi</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/apagaApagaApaga.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Apaga Apaga Apaga (Ao Vivo)</h3>
+                                <span>Álbum •</span>
+                                <span>Danilo e Davi</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/gostoAass.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Eu Gosto Assim (Ao Vivo)</h3>
+                                <span>Single •</span>
+                                <span>Gustavo Mioto e Mari Fernandez</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/dona.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>DONA (Ao Vivo)</h3>
+                                <span>Single •</span>
+                                <span>Luan Santana e Léo Foguete</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/naHoraDeAmar.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Na Hora de Amar (Insensível)</h3>
+                                <span>Álbum •</span>
+                                <span>Gusttavo Lima</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-options-area">
+                    <div class="music-options-tools-container">
+                        <h2>Internacionais</h2>
+                        <div class="back-next-content">
+                            <a href="#">Mais</a>
+                            <i class="fa-solid fa-chevron-left" onclick="LeftScroll(this)"></i>
+                            <i class="fa-solid fa-chevron-right" onclick="RightScroll(this)"></i>
+                        </div>
+                    </div>
+                    <div class="music-content-container">
+                        <div class="music-content-info">
+                            <img src="img/hallelujah.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Hallelujah</h3>
+                                <span>Álbum •</span>
+                                <span>Shawn Mendes</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/sorry.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Sorry</h3>
+                                <span>Álbum •</span>
+                                <span>Justin Bieber</span>
+                            </div>
+                        </div>
+                        
+                        <div class="music-content-info">
+                            <img src="img/divide.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Hearts Don't Break Around Here</h3>
+                                <span>Álbum •</span>
+                                <span>Ed Sheeran</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/dieWithASmile.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Die With A Smile</h3>
+                                <span>Single •</span>
+                                <span>Lady Gaga e Bruno Mars</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/illuminate.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>There's Nothing Holdin' Me Back</h3>
+                                <span>Álbum •</span>
+                                <span>Shawn Mendes</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/justice.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Hold On</h3>
+                                <span>Álbum •</span>
+                                <span>Justin Bieber</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/wonder.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Wonder</h3>
+                                <span>Álbum •</span>
+                                <span>Shawn Mendes</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/senorita.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Señorita</h3>
+                                <span>Single •</span>
+                                <span>Shawn Mendes e Camila Cabello</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/atlantis.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Atlantis</h3>
+                                <span>Single •</span>
+                                <span>Seafret</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/x.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Thinking Out Loud</h3>
+                                <span>Single •</span>
+                                <span>Ed Sheeran</span>
+                            </div>
+                        </div>
+                        <div class="music-content-info">
+                            <img src="img/plus.jpeg" alt="">
+                            <div class="music-category-name">
+                                <h3>Small Bump</h3>
+                                <span>Álbum •</span>
+                                <span>Ed Sheeran</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-options-area">
+                    <div class="music-options-tools-container">
+                        <h2>Escolha a dedo</h2>
+                        <div class="back-next-content">
+                            <a href="#">Iniciar</a>
+                            <i class="fa-solid fa-chevron-left " onclick="LeftScroll(this)"></i>
+                            <i class="fa-solid fa-chevron-right" onclick="RightScroll(this)"></i>
+                        </div>
+                    </div>
+
+                    <div class="choose-finger-music-container">
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/inTheCities.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Blackout</h3>
+                                    <span>Cristiano Araujo • In The Cities</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/meusEncantos.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Pássaro de Fogo</h3>
+                                    <span>Paula Fernades • Meus Encantos</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/1977.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>RG</h3>
+                                    <span>Luan Santana, Anitta • 1977</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/faceAFace.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Amor sem Medida (Te Voy a Amar)</h3>
+                                    <span>Matheus e Kauan • Face a Face</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/1977.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Dia, Lugar e Hora</h3>
+                                    <span>Luan Santana • 1977</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/perfil.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Estranho</h3>
+                                    <span>Marília Mendonça • Perfil</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/10anos.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Impressionando os Anjos</h3>
+                                    <span>Gustavo Mioto • 10 Anos</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/EsqueceOMundoLaFora.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Largado Às Traças</h3>
+                                    <span>Zé Neto e Cristiano • Esquece o Mundo Lá Fora</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/brunoEMarrone.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Dormi na Praça</h3>
+                                    <span>Bruno e Marrone • Bruno e Marrone - Vol. 1</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/meusEncantos.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Eu sem você</h3>
+                                    <span>Paula Fernades • Meus Encantos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/acustico.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Cantada</h3>
+                                    <span>Luan Santana • Acústico</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/inTheCities.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Caso Indefinido</h3>
+                                    <span>Cristiano Araujo • In The Cities</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/VIVA.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Água com Açúcar</h3>
+                                    <span>Luan Santana • VIVA</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/tubaroes.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Tubarões</h3>
+                                    <span>Diego e Victor Hugo • Ao Vivo Em Uberlândia Vol. 01</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/princesa.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Princesa</h3>
+                                    <span>Gustavo Mioto, Ana Castela • Atemporal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/inTheCities.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Maus Bocados</h3>
+                                    <span>Cristiano Araujo • In The Cities</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/VIVA.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Acordando o Prédio</h3>
+                                    <span>Luan Santana • VIVA</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/naHoraDeAmar.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Na Hora de Amar</h3>
+                                    <span>Gusttavo Lima • O Embaixador</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/naPraia.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Antídoto</h3>
+                                    <span>Matheus e Kauan • Na Praia 2</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/10anos.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Eu Gosto Assim</h3>
+                                    <span>Gustavo Mioto, Mari Fernades • 10 Anos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/temModaPraTudo.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Vou Ter Que Superar</h3>
+                                    <span>Matheus e Kauan, Marília Mendonça • Tem Moda Pra Tudo</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/apagaApagaApaga.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Apaga Apaga Apaga</h3>
+                                    <span>Danilo e Davi • Sol e Churrasco</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/acustico.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Escreve Aí</h3>
+                                    <span>Luan Santana • Acústico</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/buteco.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Apelido Carinhoso</h3>
+                                    <span>Gusttavo Lima • Buteco do Gusttavo Lima Vol. 2</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/naPraia.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Te Assumi Pro Brasil</h3>
+                                    <span>Matheus e Kauan • Na Praia 2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/50.50.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Que Pena Que Acabou</h3>
+                                    <span>Gusttavo lima • 50/50</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/perfil.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Como Faz Com Ela</h3>
+                                    <span>Marília Mendonça • Perfil</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/10anos.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Com ou Sem Mim</h3>
+                                    <span>Gustavo Mioto • 10 Anos</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/oNossoTempoEHoje.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Tudo Que Você Quiser</h3>
+                                    <span>Luan Santana • O Nosso Tempo É Hoje</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/goiania.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Medo Bobo</h3>
+                                    <span>Maiara e Maraisa • Ao Vivo em Goiânia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choose-finger-music-column">
+                            <div class="choose-finger-music-info">
+                                <img src="img/goiania.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Motel</h3>
+                                    <span>Maiara e Maraisa • Ao Vivo em Goiânia</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/50reais.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>50 Reais</h3>
+                                    <span>Naiara Azevedo • Totalmente Diferente</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/perfil.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Infiel</h3>
+                                    <span>Marília Mendonça • Perfil</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/50.50.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Homem de Família</h3>
+                                    <span>Gusttavo lima • 50/50</span>
+                                </div>
+                            </div>
+                            <div class="choose-finger-music-info">
+                                <img src="img/oNossoTempoEHoje.jpeg" alt="">
+                                <div class="choose-finger-music-name-album">
+                                    <h3>Tanto Faz</h3>
+                                    <span>Luan Santana • O Nosso Tempo É Hoje</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

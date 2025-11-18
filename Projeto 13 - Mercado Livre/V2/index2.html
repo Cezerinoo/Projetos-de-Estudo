@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Mercado Livre</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+        :root {
+            --principal-color-ml: #FFE600;
+            --alternative-color-ml: #0067EF;
+            --announcement-color-ml: #771C8F;
+            --announcement-color-ml-2: #A91192;
+            --default-color-text: #000;
+            --alternative-color-text: #2B2F74;
+            --light-color-text: #CCC;
+            --accent-color-text: #00A650;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Sora', sans-serif;
+        }
+
+        body {
+            background-color: #FFF;
+            color: var(--default-color-text);
+            overflow-x: hidden;
+        }
+
+        /* Navbar principal */
+        .nav-main {
+            background-color: var(--principal-color-ml);
+            padding: 0.8rem 1.5rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        /* Logo */
+        .nav-logo {
+            flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            width: 134px;
+            height: 34px;
+        }
+
+        /* Barra de busca */
+        .nav-search {
+            flex: 1 1 500px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-form {
+            display: flex;
+            width: 100%;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            border: 2px solid transparent;
+            border-radius: 2px 0 0 2px;
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            border-color: var(--alternative-color-ml);
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #fff;
+            border: none;
+            border-radius: 0 2px 2px 0;
+            padding: 0 1rem;
+            cursor: pointer;
+            border-left: 1px solid var(--light-color-text);
+        }
+
+        /* Anúncio de ofertas */
+        .offer-adviser {
+            flex-shrink: 0;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .offer-adviser i {
+            margin-right: 0.5rem;
+            color: var(--announcement-color-ml);
+        }
+
+        /* Navbar secundária */
+        .nav-secondary {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .nav-secondary .nav-container {
+            gap: 2rem;
+        }
+
+        /* Localização */
+        .nav-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--alternative-color-text);
+            flex-shrink: 0;
+        }
+
+        .nav-location p {
+            font-weight: 300;
+            font-size: 0.85rem;
+        }
+
+        .nav-location .emphasis-text {
+            color: var(--default-color-text);
+            font-weight: 500;
+        }
+
+        /* Links de navegação */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--default-color-text);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #3c3c3c;
+        }
+
+        /* Ferramentas do usuário */
+        .nav-tools {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .nav-tools a {
+            text-decoration: none;
+            color: var(--alternative-color-text);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .nav-tools a:hover {
+            color: var(--default-color-text);
+        }
+
+        .cart-icon {
+            color: var(--alternative-color-text);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-search {
+                order: 3;
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-main, .nav-secondary {
+                padding: 0.8rem 1rem;
+            }
+
+            .offer-adviser {
+                display: none;
+            }
+
+            .nav-location {
+                display: none;
+            }
+
+            .nav-tools a:not(:last-child) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo img {
+                width: 100px;
+                height: auto;
+            }
+
+            .nav-tools {
+                gap: 0.5rem;
+            }
+        }
+
+        /* SLIDER ORGANIZADO */
+        .banner-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 400px; /* Altura fixa para o slider */
+        }
+
+        .slideImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0; /* Impede que as imagens encolham */
+        }
+
+        .buttons-container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 1rem;
+            pointer-events: none; /* Permite clicar através dos botões */
+        }
+
+        .buttons-container button {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--alternative-color-ml);
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 50%;
+            pointer-events: auto; /* Habilita cliques nos botões */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .buttons-container button:hover {
+            background-color: #fff;
+            transform: scale(1.1);
+        }
+
+        .dots-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #fff;
+            transform: scale(1.2);
+        }
+
+        /* Responsividade do Slider */
+        @media (max-width: 768px) {
+            .slider-wrapper {
+                height: 300px;
+            }
+            
+            .buttons-container button {
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-wrapper {
+                height: 200px;
+            }
+            
+            .banner-container {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-main">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__large_plus.png" alt="Mercado Livre">
+            </div>
+            
+            <div class="nav-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="offer-adviser">
+                <i class="fas fa-tags"></i>
+                <span>Ofertas do dia</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar secundária -->
+    <nav class="nav-secondary">
+        <div class="nav-container">
+            <div class="nav-location">
+                <i class="fas fa-location-dot"></i>
+                <div class="text-column">
+                    <p>Informe seu</p>
+                    <p class="emphasis-text">CEP</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#">Categorias</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Histórico</a>
+                <a href="#">Supermercado</a>
+                <a href="#">Moda</a>
+                <a href="#">Vender</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <div class="nav-tools">
+                <a href="#">Crie sua conta</a>
+                <a href="#">Entrar</a>
+                <a href="#">Compras</a>
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slider Organizado -->
+    <div class="banner-container">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <img src="../assets/slide1.webp" alt="Oferta 1" class="slideImg">
+                <img src="../assets/slide2.webp" alt="Oferta 2" class="slideImg">
+                <img src="../assets/slide3.webp" alt="Oferta 3" class="slideImg">
+                <img src="../assets/slide4.webp" alt="Oferta 4" class="slideImg">
+                <img src="../assets/slide5.webp" alt="Oferta 5" class="slideImg">
+            </div>
+            
+            <div class="buttons-container">
+                <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="dots-container">
+                <!-- Os dots serão gerados pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Slider {
+            constructor() {
+                this.sliderWrapper = document.querySelector('.slider-wrapper');
+                this.slides = document.querySelectorAll('.slideImg');
+                this.prevBtn = document.getElementById('prev-btn');
+                this.nextBtn = document.getElementById('next-btn');
+                this.dotsContainer = document.querySelector('.dots-container');
+                
+                this.currentSlide = 0;
+                this.slideWidth = this.slides[0].clientWidth;
+                this.totalSlides = this.slides.length;
+                
+                this.init();
+            }
+            
+            init() {
+                // Criar dots
+                this.createDots();
+                
+                // Event listeners
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Atualizar slide width no resize
+                window.addEventListener('resize', () => {
+                    this.slideWidth = this.slides[0].clientWidth;
+                    this.updateSlider();
+                });
+                
+                // Auto slide (opcional)
+                this.startAutoSlide();
+            }
+            
+            createDots() {
+                for (let i = 0; i < this.totalSlides; i++) {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.dotsContainer.appendChild(dot);
+                }
+            }
+            
+            updateSlider() {
+                this.sliderWrapper.style.transform = `translateX(-${this.currentSlide * this.slideWidth}px)`;
+                
+                // Atualizar dots
+                document.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateSlider();
+            }
+            
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateSlider();
+            }
+            
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                this.updateSlider();
+            }
+            
+            startAutoSlide() {
+                setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Muda a cada 5 segundos
+            }
+        }
+        
+        // Inicializar slider quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            new Slider();
+        });
+    </script>
+    
+</body>
+</html>

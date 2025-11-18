@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Mercado Livre</title>
+    <style>
+        :root {
+            --principal-color-ml: #FFE600;
+            --alternative-color-ml: #0067EF;
+            --announcement-color-ml: #771C8F;
+            --announcement-color-ml-2: #A91192;
+            --default-color-text: #000;
+            --alternative-color-text: #2B2F74;
+            --light-color-text: #CCC;
+            --accent-color-text: #00A650;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sora', sans-serif;
+        }
+
+        body {
+            background-color: #FFF;
+            color: var(--default-color-text);
+            overflow-x: hidden;
+        }
+
+        /* Navbar principal */
+        .nav-main {
+            background-color: var(--principal-color-ml);
+            padding: 0.8rem 1.5rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        /* Logo */
+        .nav-logo {
+            flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            width: 134px;
+            height: 34px;
+        }
+
+        /* Barra de busca */
+        .nav-search {
+            flex: 1 1 500px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-form {
+            display: flex;
+            width: 100%;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            border: 2px solid transparent;
+            border-radius: 2px 0 0 2px;
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            border-color: var(--alternative-color-ml);
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #fff;
+            border: none;
+            border-radius: 0 2px 2px 0;
+            padding: 0 1rem;
+            cursor: pointer;
+            border-left: 1px solid var(--light-color-text);
+        }
+
+        /* Anúncio de ofertas */
+        .offer-adviser {
+            flex-shrink: 0;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .offer-adviser i {
+            margin-right: 0.5rem;
+            color: var(--announcement-color-ml);
+        }
+
+        /* Navbar secundária */
+        .nav-secondary {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .nav-secondary .nav-container {
+            gap: 2rem;
+        }
+
+        /* Localização */
+        .nav-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--alternative-color-text);
+            flex-shrink: 0;
+        }
+
+        .nav-location p {
+            font-weight: 300;
+            font-size: 0.85rem;
+        }
+
+        .nav-location .emphasis-text {
+            color: var(--default-color-text);
+            font-weight: 500;
+        }
+
+        /* Links de navegação */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--default-color-text);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #3c3c3c;
+        }
+
+        /* Ferramentas do usuário */
+        .nav-tools {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .nav-tools a {
+            text-decoration: none;
+            color: var(--alternative-color-text);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .nav-tools a:hover {
+            color: var(--default-color-text);
+        }
+
+        .cart-icon {
+            color: var(--alternative-color-text);
+            font-size: 1.2rem;
+        }
+
+        /* Menu hamburguer para mobile */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--default-color-text);
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-search {
+                order: 3;
+                flex: 1 1 100%;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-main, .nav-secondary {
+                padding: 0.8rem 1rem;
+            }
+            
+            .offer-adviser {
+                display: none;
+            }
+            
+            .nav-location {
+                display: none;
+            }
+            
+            .nav-tools a:not(:last-child) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo img {
+                width: 100px;
+                height: auto;
+            }
+            
+            .nav-tools {
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar principal -->
+    <nav class="nav-main">
+        <div class="nav-container">
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-logo">
+                <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.18.9/mercadolibre/logo__large_plus.png" alt="Mercado Livre">
+            </div>
+            
+            <div class="nav-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="offer-adviser">
+                <i class="fas fa-tags"></i>
+                <span>Ofertas do dia</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar secundária -->
+    <nav class="nav-secondary">
+        <div class="nav-container">
+            <div class="nav-location">
+                <i class="fas fa-location-dot"></i>
+                <div class="text-column">
+                    <p>Informe seu</p>
+                    <p class="emphasis-text">CEP</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#">Categorias</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Histórico</a>
+                <a href="#">Supermercado</a>
+                <a href="#">Moda</a>
+                <a href="#">Vender</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <div class="nav-tools">
+                <a href="#">Crie sua conta</a>
+                <a href="#">Entrar</a>
+                <a href="#">Compras</a>
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Conteúdo da página -->
+    <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <h1>Conteúdo da página</h1>
+        <p>Esta é uma demonstração da navbar responsiva do Mercado Livre.</p>
+    </main>
+
+    <script>
+        // Simulação de menu mobile (seria implementado completamente em um projeto real)
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            alert('Menu mobile seria aberto aqui em uma implementação completa');
+        });
+    </script>
+</body>
+</html>

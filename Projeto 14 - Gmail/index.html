@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <title>Gmail</title>
+</head>
+<body>
+
+    <nav id="nav-bar">
+        <div id="nav-logo">
+            <i class="fa-solid fa-bars"></i>
+            <img src="img/gmail-logo-txt.png" alt="">
+        </div>
+        
+        <div id="nav-search-container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="search-bar" type="text" placeholder="Search mail">
+            <i class="fa-solid fa-sliders"></i>
+        </div>
+
+        <div id="nav-tools">
+            <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-grip"></i>
+            <img class="user-account" src="img/user.webp" alt="">
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside id="menu-side-bar">
+            <div class="emphasis-btn">
+                <a href="#" id="compose-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <a href="#">
+                <i class="fa-solid fa-inbox"></i>
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-star"></i>
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-clock"></i>
+            </a>
+            <a href="#">
+                <i class="fa-regular fa-paper-plane"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-scroll"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="emphasis-btn">
+                <a href="#">
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+        </aside>
+
+        <main id="main-container">
+            <div id="mail-tools">
+                <div class="tools-box">
+                    <input type="checkbox" name="" id="select-emails">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="tools-box">
+                    <span class="quantityMails">1-50 of 1,442</span>
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+
+            <div id="mail-stack-container">
+                <div class="mail-stack-box">
+                    <i class="fa-solid fa-inbox"></i>
+                    <span>Principal</span>
+                </div>
+                <div class="mail-stack-box">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Promotions</span>
+                    <span class="new-emails" id="new-promotions">100+</span>
+                </div>
+                <div class="mail-stack-box">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Social</span>
+                    <span class="new-emails" id="new-social">20+</span>
+                </div>
+                <div class="mail-stack-box">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Updates</span>
+                    <span class="new-emails" id="new-updates">50+</span>
+                </div>
+            </div>
+
+            <div id="mail-messages-container">
+                <!-- Mensagem não lida -->
+                <div class="mail-message-box unread">
+                    <div class="mail-options-left">
+                        <input type="checkbox" class="mail-checkbox">
+                        <i class="fa-regular fa-star mail-star"></i>
+                        <span class="mail-sender">Uber</span>
+                    </div>
+
+                    <div class="mail-content">
+                        <span class="mail-subject">Verifique o e-mail da sua conta Uber</span>
+                        <span class="mail-preview">Toque na ligação pra confirmar seu e-mail</span>
+                    </div>
+
+                    <div class="mail-options-right">
+                        <button class="unsub-btn">Unsubscribe</button>
+                        <div class="mail-actions">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                            <i class="fa-regular fa-envelope-open"></i>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <span class="mail-time">12:00 PM</span>
+                    </div>
+                </div>
+                
+                <!-- Mensagem lida -->
+                <div class="mail-message-box">
+                    <div class="mail-options-left">
+                        <input type="checkbox" class="mail-checkbox">
+                        <i class="fa-regular fa-star mail-star starred"></i>
+                        <span class="mail-sender">Google</span>
+                    </div>
+
+                    <div class="mail-content">
+                        <span class="mail-subject">Atualização de segurança da conta</span>
+                        <span class="mail-preview">Confira as últimas atividades na sua conta Google</span>
+                    </div>
+
+                    <div class="mail-options-right">
+                        <button class="unsub-btn">Unsubscribe</button>
+                        <div class="mail-actions">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                            <i class="fa-regular fa-envelope-open"></i>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <span class="mail-time">11:30 AM</span>
+                    </div>
+                </div>
+                
+                <!-- Outra mensagem não lida -->
+                <div class="mail-message-box unread">
+                    <div class="mail-options-left">
+                        <input type="checkbox" class="mail-checkbox">
+                        <i class="fa-regular fa-star mail-star"></i>
+                        <span class="mail-sender">Netflix</span>
+                    </div>
+
+                    <div class="mail-content">
+                        <span class="mail-subject">Nova temporada disponível</span>
+                        <span class="mail-preview">Confira as novas séries adicionadas este mês</span>
+                    </div>
+
+                    <div class="mail-options-right">
+                        <button class="unsub-btn">Unsubscribe</button>
+                        <div class="mail-actions">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                            <i class="fa-regular fa-envelope-open"></i>
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <span class="mail-time">10:15 AM</span>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

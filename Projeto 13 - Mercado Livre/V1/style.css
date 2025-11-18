@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+    --principal-color-ml: #FFE600;
+    --alternative-color-ml: #0067EF;
+    --announcement-color-ml: #771C8F;
+    --announcement-color-ml-2: #A91192;
+    --default-color-text: #000;
+    --alternative-color-text: #2B2F74;
+    --light-color-text: #CCC;
+    --accent-color-text: #00A650;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+body {
+    background-color: #FFF;
+    color: var(--default-color-text);
+    overflow-x: hidden;
+}
+
+/* Nav styles */
+#nav-area {
+    background-color: var(--principal-color-ml);
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+#nav-logo img {
+    width: 170px;
+}
+
+#nav-search,
+#offer-adviser {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-search input {
+    padding: 10px 15px;
+    min-width: 600px;
+    border: 1px solid #CCC;
+}
+
+#nav-search .fa-solid {
+    position: absolute;
+    left: 560px;
+    cursor: pointer;
+    padding: 0px 10px;
+    border-left: 1px solid #CCC;
+    font-size: 0.9em;
+}
+#offer-adviser {
+    font-size: 0.9em;
+}
+#offer-adviser .fa-solid {
+    margin-right: 10px;
+}
+
+#nav-location {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--alternative-color-text);
+}
+
+#nav-location p {
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--alternative-color-text);
+}
+
+#nav-location .emphasis-text {
+    color: var(--default-color-text);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#nav-links,
+#nav-tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#nav-links a,
+#nav-tools a {
+    text-decoration: none;
+    color: var(--default-color-text);
+    font-size: 0.8em;
+    transition: all .3s ease;
+}
+
+#nav-links a:hover,
+#nav-tools a:hover {
+    transform: translateY(-2px);
+    color: #3c3c3c;
+}
+
+#nav-tools {
+    color: var(--alternative-color-text);
+}
+

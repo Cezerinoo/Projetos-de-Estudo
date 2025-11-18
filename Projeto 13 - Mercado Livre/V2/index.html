@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Mercado Livre</title>
+</head>
+<body>
+
+    <nav class="nav-main">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/logo_ml.png" alt="Mercado Livre">
+            </div>
+            
+            <div class="nav-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Buscar produtos, marcas e muito mais...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="offer-adviser">
+                <i class="fas fa-tags"></i>
+                <span>Ofertas do dia</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar secundária -->
+    <nav class="nav-secondary">
+        <div class="nav-container">
+            <div class="nav-location">
+                <i class="fas fa-location-dot"></i>
+                <div class="text-column">
+                    <p>Informe seu</p>
+                    <p class="emphasis-text">CEP</p>
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#">Categorias</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Histórico</a>
+                <a href="#">Supermercado</a>
+                <a href="#">Moda</a>
+                <a href="#">Vender</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <div class="nav-tools">
+                <a href="#">Crie sua conta</a>
+                <a href="#">Entrar</a>
+                <a href="#">Compras</a>
+                <i class="fas fa-shopping-cart cart-icon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <img src="../assets/slide1.webp" alt="" class="slideImg">
+                <img src="../assets/slide2.webp" alt="" class="slideImg">
+                <img src="../assets/slide3.webp" alt="" class="slideImg">
+                <img src="../assets/slide4.webp" alt="" class="slideImg">
+                <img src="../assets/slide5.webp" alt="" class="slideImg">
+                <img src="../assets/slide6.webp" alt="" class="slideImg">
+                <img src="../assets/slide7.webp" alt="" class="slideImg">
+            </div>
+            
+            <div class="buttons-container">
+                <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="dots-container">
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <div class="category-container">
+            <div class="category-card">
+                <h3>Mais Vendidos</h3>
+                <img src="../assets/sales.png" alt="">
+                <p>Os Top 30 produtos mais vendidos do mês!</p>
+                <button>Mais Vendidos</button>
+            </div>
+            <div class="category-card">
+                <h3>Menos de R$500</h3>
+                <img src="../assets/desconto.png" alt="">
+                <p>Uma lista de produtos que cabem no seu bolso.</p>
+                <button>Ir para Em Desconto</button>
+            </div>
+            <div class="category-card">
+                <h3>Entrega FULL</h3>
+                <img src="../assets/truck.png" alt="">
+                <p>Compre hoje e receba amanhã!</p>
+                <button>Entregas Rápidas</button>
+            </div>
+            <div class="category-card">
+                <h3>Troque Pontos</h3>
+                <img src="../assets/points.png" alt="">
+                <p>Use seus pontos em troca de produtos!</p>
+                <button>Ir para Trocas</button>
+            </div>
+            <div class="category-card">
+                <h3>Internacional</h3>
+                <img src="../assets/international.png" alt="">
+                <p>Encontre os melhores produtos de fora do país.</p>
+                <button>Ir para Internacional</button>
+            </div>
+        </div>
+
+        <div class="offers-container">   
+            <div class="offers-box">
+                <div class="principal-offer-card">
+                    <img src="../assets/cooktop.webp" alt="">
+                    <p class="title-principal-card">Cooktop Itatiaia Essencial 4 Bocas Preto</p>
+                    <p class="before-price">R$ 470,00</p>
+                    <div class="price-container">
+                        <p class="after-price">R$ 352,00</p>
+                        <span class="descont-porcent">25% OFF</span>
+                    </div>
+                    <p class="parcel-interests">7x R$ 50,29 sem juros</p>
+                    <div class="freight-container">
+                        <p class="freight-text">Frete grátis</p>
+                        <span><i class="fa-solid fa-bolt"></i> FULL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers-box">
+                <div class="product-card">
+                    <img src="" alt="">
+                    <p class="title-principal-card">Cooktop Itatiaia Essencial 4 Bocas Preto</p>
+                    <p class="before-price">R$ 470,00</p>
+                    <div class="price-container">
+                        <p class="after-price">R$ 352,00</p>
+                        <span class="descont-porcent">25% OFF</span>
+                    </div>
+                    <p class="parcel-interests">7x R$ 50,29 sem juros</p>
+                    <div class="freight-container">
+                        <p class="freight-text">Frete grátis</p>
+                        <span><i class="fa-solid fa-bolt"></i> FULL</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="" alt="">
+                    <p class="title-principal-card">Cooktop Itatiaia Essencial 4 Bocas Preto</p>
+                    <p class="before-price">R$ 470,00</p>
+                    <div class="price-container">
+                        <p class="after-price">R$ 352,00</p>
+                        <span class="descont-porcent">25% OFF</span>
+                    </div>
+                    <p class="parcel-interests">7x R$ 50,29 sem juros</p>
+                    <div class="freight-container">
+                        <p class="freight-text">Frete grátis</p>
+                        <span><i class="fa-solid fa-bolt"></i> FULL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

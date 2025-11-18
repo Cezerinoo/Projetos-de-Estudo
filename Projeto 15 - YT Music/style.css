@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #020202;
+    --bg-accent-color: #081F21;
+    --default-text-color: #FFF;
+    --alternative-color-text: #3f4042;
+    --border-radius: 8px;
+}
+
+body {
+    background-color: var(--bg-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: var(--bg-accent-color);
+    top: -70px;
+    left: 180px;
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: var(--bg-accent-color);
+    bottom: 200px;
+    right: -70px;
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1em;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 99;
+}
+
+.content-container {
+    display: flex;
+    gap: 3em;
+    justify-content: flex-start;
+    position: relative;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    color: var(--default-text-color);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Nav Styles */
+#nav-container {
+    display: flex;
+    padding: 10px 15px;
+    overflow-x: hidden;
+    height: 4em;
+}
+
+#nav-logo, #nav-tools {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-text-color);
+}
+
+#nav-logo img {
+    width: 40px;
+}
+
+#search-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 1em;
+    position: relative;
+}
+
+#search-area input {
+    width: 70%;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--default-text-color);
+}
+
+input::placeholder{
+    color: var(--default-text-color);
+}
+
+#search-area button {
+    padding: 7px 9px;
+    background-color: transparent;
+    color: var(--default-text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 68%;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+#search-area button:hover, #search-btn-hidden:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#login-btn {
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #FFF;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+    background-color: #DDD;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: var(--default-text-color);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#search-btn-hidden {
+    display: none;
+    border-radius: 50%;
+    transition: all .3s ease;
+    padding: 7px 9px;
+}
+
+@media screen and (max-width: 768px) {
+    #nav-logo, #nav-tools {
+        font-size: 0.8em;
+    }
+
+    #login-btn {
+        padding: 7px 12px;
+        font-size: 0.8em;
+    }
+
+    #nav-logo img {
+        width: 30px;
+    }
+
+    #search-area input, #search-area button {
+        font-size: 0.8em;
+    }
+
+    #search-area input {
+        padding: 7px 12px;
+    }
+    
+    #search-area button {
+        left: 66%;
+    }
+
+    #nav-container {
+        height: 3em;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #search-area {
+        display: none;
+    }
+
+    #nav-container {
+        justify-content: space-between;
+    }
+
+    #search-btn-hidden {
+        display: block;
+    }
+}
+
+/* Side Bar styles */
+#side-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+#side-bar-container a {
+    text-decoration: none;
+    color: var(--default-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    width: 5em;
+    padding: 15px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.6em;
+    border-radius: var(--border-radius);
+    transition: all .3s ease; 
+}
+
+#side-bar-container .fa-solid,
+#side-bar-container .fa-regular {
+    font-size: 2em;
+}
+
+#side-bar-container a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    #side-bar-container a {
+        font-size: 0.5em;
+        padding: 12px 8px;
+    }
+
+    #side-bar-container .fa-solid,
+    #side-bar-container .fa-regular {
+        font-size: 1.5em; 
+    }
+
+    #side-bar-container a:hover {
+        box-shadow: 0 0 13px 3px rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #side-bar-container {
+        display: none;
+    }
+}
+
+/* Hidden Menu */
+#hidden-menu {
+    background-color: var(--bg-color);
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    width: 14em;
+    height: 100vh;
+    gap: 3em;
+    display: none;
+}
+
+/* Estado quando o menu hidden está ativo */
+.content-container.hidden-menu-active #side-bar-container {
+    display: none;
+}
+
+.content-container.hidden-menu-active #hidden-menu {
+    display: flex;
+}
+
+#hidden-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.hidden-menu-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    text-decoration: none;
+    color: var(--default-text-color);
+}
+
+.hidden-menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#new-playlist-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--default-text-color);
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#new-playlist-btn:hover {
+    background-color: #FFF;
+    color: #000;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Music Type Container */
+#music-type-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+#music-type-container .music-option-link {
+    font-size: 0.8em;
+    color: var(--default-text-color);
+    text-decoration: none;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 13px;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 768px) {
+    #music-type-container .music-option-link {
+        font-size: 0.6em;
+        padding: 6px 11px;
+    }
+
+    /* Hidden menu em tablet */
+    #hidden-menu {
+        width: 12em;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    /* SUA REGRA ORIGINAL - NÃO MUDA */
+    #side-bar-container {
+        display: none;
+    }
+    
+    /* Em mobile, o hidden menu também fica escondido por padrão */
+    #hidden-menu {
+        display: none;
+    }
+    
+    /* Só mostra o hidden menu em mobile se a classe active estiver presente */
+    .content-container.hidden-menu-active #hidden-menu {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        height: 100vh;
+        background: var(--bg-color);
+        z-index: 1000;
+        padding: 0;
+    }
+}
+
+/* Music Options Area */
+.music-options-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    width: 100%;
+}
+
+.music-options-tools-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-next-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.back-next-content .fa-solid {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8em;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.back-next-content .fa-solid:hover, .back-next-content a:hover, #music-type-container .music-option-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-next-content a {
+    text-decoration: none;
+    color: var(--default-text-color);
+    font-weight: 300;
+    font-size: 0.8em;
+    border-radius: 30px;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.music-options-tools-container h2 {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.music-content-container {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.0) transparent;
+    transition: all .3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.music-content-container:hover, .choose-finger-music-container:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.music-content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.music-content-info img {
+    width: 180px;
+    border-radius: var(--border-radius);
+}
+
+.music-category-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-category-name h3, .choose-finger-music-name-album h3 {
+    font-size: 1em;
+    font-weight: 500;
+    display: block;
+}
+
+.music-category-name span, .choose-finger-music-name-album span {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #CCC;
+}
+
+@media screen and (max-width: 768px) {
+    .music-options-tools-container h2 {
+        font-size: 1.4em;
+    }
+
+    .music-content-info {
+        width: 160px;
+    }
+
+    .music-content-info img {
+        width: 140px;
+    }
+    
+    .music-category-name h3, .choose-finger-music-name-album h3 {
+        font-size: 0.8em;
+    }
+
+    .music-category-name span, .choose-finger-music-name-album span {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .back-next-content {
+        gap: 0.4em;
+    }
+
+    .back-next-content .fa-solid {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6em;
+        line-height: 20px;
+    }
+    .back-next-content a {
+        font-size: 0.6em;
+        border-radius: 30px;
+        padding: 6px 18px;
+    }
+}
+
+/* Music Options Area / Choose */
+.choose-finger-music-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.0) transparent;
+    transition: all .3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.choose-finger-music-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+.choose-finger-music-name-album {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    flex-wrap: wrap;
+}
+
+.choose-finger-music-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 80px;
+}
+
+.choose-finger-music-info img {
+    width: 70px;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 768px) {
+    .choose-finger-music-info img {
+        width: 60px;
+    }
+}
