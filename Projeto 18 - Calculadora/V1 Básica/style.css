@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 100vh;
+}
+
+.container h1 {
+    font-size: 1.3em;
+    color: rgb(46, 46, 46);
+}
+
+.calculator {
+    background-color: #FFF;
+    padding: 1.8em;
+    border-radius: 10px;
+    width: 500px;
+    border: 1px solid rgb(46, 46, 46);;
+}
+
+#display {
+    width: 100%;
+    padding: 20px 15px;
+    font-size: 0.9em;
+    background-color: rgb(46, 46, 46);
+    border-radius: 10px;
+    color: #FFF;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.calculator-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.calculator-btn-container button {
+    height: 50px;
+    cursor: pointer;
+    background-color: #FFF;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    font-weight: 500;
+}
+
+.calculator-btn-container button:hover {
+    background-color: #f0f0f0;
+}
+
+#equalBtn {
+    grid-row: 4 / 6;
+    grid-column: 4;
+    height: 100%;
+}
+
+#zeroBtn {
+    grid-column: 1 / 3;
+}
+
+.calculator-btn-container button.emphasisBtn {
+    background-color: rgb(46, 46, 46);
+    color: #FFF;
+}
+
+.calculator-btn-container button.emphasisBtn:hover {
+    background-color: rgb(73, 73, 73);
+}

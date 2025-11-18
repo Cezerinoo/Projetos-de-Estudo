@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tripadvisor</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav id="nav-container">
+            <div id="nav-logo">
+                <i id="menu-btn" class="fa-solid fa-bars"></i>
+                <img src="assets/logo.svg" alt="Tripadvisor">
+            </div>
+
+            <div id="nav-links">
+                <a class="hover-link" href="#">Descobrir</a>
+                <a class="hover-link" href="#">Viagens</a>
+                <a class="hover-link" href="#">Avaliar</a>
+                <a class="hover-link" href="#">Mais</a>
+            </div>
+
+            <div id="nav-tools">
+                <a href="#" class="hover-link">
+                    <i class="fa-solid fa-globe"></i> | BRL
+                </a>
+                <a href="#" class="dark-btn">Fazer Login</a>
+            </div>
+        </nav>
+
+        <section id="search-area">
+            <h2>Aonde você quer ir?</h2>
+
+            <div id="search-categories">
+                <a class="search-links" href="#">
+                    <i class="fa-regular fa-house"></i>
+                    <span>Pesquisar tudo</span>
+                </a>
+                <a class="search-links" href="#">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Hotéis</span>
+                </a>
+                <a class="search-links" href="#">
+                    <i class="fa-regular fa-camera"></i>
+                    <span>O que fazer</span>
+                </a>
+                <a class="search-links" href="#">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Restaurantes</span>
+                </a>
+                <a class="search-links" href="#">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <span>Voos</span>
+                </a>
+            </div>
+
+            <div id="search-input">
+                <input type="text" placeholder="Lugares para ir, o que fazer, hotéis...">
+                <button id="search-btn">
+                    Buscar
+                </button>
+            </div>
+        </section>
+
+        <section id="annoucement-area">
+            <div id="slider-wrapper">
+                <div class="slides-container" id="slides-container">
+                    <div class="slide-container active" id="slide-1">
+                        <span>@aventura</span>
+                    </div>
+                    <div class="slide-container" id="slide-2">
+                        <span>@cultura</span>
+                    </div>
+                    <div class="slide-container" id="slide-3">
+                        <span>@gastronomia</span>
+                    </div>
+                    <div class="slide-container" id="slide-4">
+                        <span>@relaxamento</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="announcement-text">
+                <h2>Encontre atividade para tudo que você curte</h2>
+                <p>Pesquise mais de 400 mil experiências e reserve conosco</p>
+                <a class="dark-btn" href="#">Reserve agora</a>
+            </div>
+        </section>
+
+        <section id="activity-interests">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h3>Encontre atividades por interesse</h3>
+                    <p>Você encontra tudo do que gosta aqui</p>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-img" id="catalogue-options-img-1">
+                    <span>Atividades ao ar livre</span>
+                </div>
+                <div class="catalogue-options-img" id="catalogue-options-img-2">
+                    <span>Comida</span>
+                </div>
+                <div class="catalogue-options-img" id="catalogue-options-img-3">
+                    <span>Cultura</span>
+                </div>
+                <div class="catalogue-options-img" id="catalogue-options-img-4">
+                    <span>Aquático</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="near-you">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h3>Explore experiências perto de Brusque</h3>
+                    <p>Escolhas imperdíveis perto de você</p>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-1"></div>
+                    <h3>Tour Raízes Italianas Nova Trento</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(12)</span>
+                    </div>
+                    <p>a partir de R$  159 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-2"></div>
+                    <h3>Rota Italiana - Nova Trento e Brusque</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,5</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot"></div>
+                        </div>
+                        <span>(19)</span>
+                    </div>
+                    <p>a partir de R$  170 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-3"></div>
+                    <h3>Rota Germânica - Cultural e histórica em Ilhota, Blumenau e Pomerode</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,3</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot"></div>
+                        </div>
+                        <span>(59)</span>
+                    </div>
+                    <p>a partir de R$  154 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-4"></div>
+                    <h3>Tour Mergulho Snorkel na Ilha Do Macuco C/Fotos Subaquáticas by Zimbros Ecotour</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot"></div>
+                        </div>
+                        <span>(126)</span>
+                    </div>
+                    <p>a partir de R$  200 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-5"></div>
+                    <h3>Bombinhas com Safári de Praias by Casa do Turista</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,8</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(97)</span>
+                    </div>
+                    <p>a partir de R$  234 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-6"></div>
+                    <h3>Tour Ecológico de Barco 10 Praias Desertas- Trilhas Cachoeira-by Zimbros Ecotour</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(175)</span>
+                    </div>
+                    <p>a partir de R$  180 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-7"></div>
+                    <h3>Combo Barco Pirata, Praia e Parque Unipraias com transfers</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,5</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(21)</span>
+                    </div>
+                    <p>a partir de R$  381 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-8"></div>
+                    <h3>Experiência Degustação de Cervejas</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot"></div>
+                        </div>
+                        <span>(35)</span>
+                    </div>
+                    <p>a partir de R$  75 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-9"></div>
+                    <h3>City Tour Floripa by Bus - Toda Ilha - O passeio mais completo da cidade</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(546)</span>
+                    </div>
+                    <p>a partir de R$  180 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="near-you-img-10"></div>
+                    <h3>Pôr do sol Praia do Cação com Fotos Inclusas by Zimbros Ecotour</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(93)</span>
+                    </div>
+                    <p>a partir de R$  120 por adulto</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="inspirations-trip">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h3>Inspiração para começar</h3>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="inspirations-trip-img-1"></div>
+                    <a href="#">Onde observar estrelas ao redor do mundo, de Utah a Dubai</a>
+                </div>
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="inspirations-trip-img-2"></div>
+                    <a href="#">Aproveite a arte em Paris, Nova York e outros locais culturais badalados</a>
+                </div>
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="inspirations-trip-img-3"></div>
+                    <a href="#">13 cidades, 13 viagens gastronômicas inacreditáveis</a>
+                </div>
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="inspirations-trip-img-4"></div>
+                    <a href="#">Bali, Oahu e mais 10 ilhas para reservar agora mesmo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="what-to-do-now">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h3>O que fazer agora</h3>
+                    <p>Favoritos da estação que você não pode perder</p>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-1"></div>
+                    <div class="local-trip">Porto</div>
+                    <h3>Tour Completo pelo Vale do Douro com Almoço, Degustações de vinhos e Cruzeiro no Rio</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(10.296)</span>
+                    </div>
+                    <p>a partir de R$ 631 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-2"></div>
+                    <div class="local-trip">Rovaniemi</div>
+                    <h3>Northern Lights Rovaniemi: visualização garantida e quilometragem ilimitada</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(1.560)</span>
+                    </div>
+                    <p>a partir de R$ 1.268 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-3"></div>
+                    <div class="local-trip">Cidade do Cabo</div>
+                    <h3>Da Cidade do Cabo: passeio guiado de dia inteiro por Hermanus e baleias</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(154)</span>
+                    </div>
+                    <p>a partir de R$ 351 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-4"></div>
+                    <div class="local-trip">Munique</div>
+                    <h3>Experiência guiada na Oktoberfest de Munique com cerveja e comida</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,8</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(44)</span>
+                    </div>
+                    <p>a partir de R$ 1.242 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-5"></div>
+                    <div class="local-trip">Florença</div>
+                    <h3>Excursão de um dia pela Toscana a partir de Florença: Siena, San Gimignano, Pisa e almoço em uma vinícola</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(5.616)</span>
+                    </div>
+                    <p>a partir de R$ 669 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-6"></div>
+                    <div class="local-trip">Edimburgo</div>
+                    <h3>Excursão a pé pelas galerias assombradas e cemitério de Edimburgo</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(1.374)</span>
+                    </div>
+                    <p>a partir de R$ 174 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-7"></div>
+                    <div class="local-trip">Cidade do Cabo Central</div>
+                    <h3>Excursão de meio dia aos pinguins de Boulders e excursão para grupos pequenos em Cape Point</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,8</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(226)</span>
+                    </div>
+                    <p>a partir de R$ 272 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-8"></div>
+                    <div class="local-trip">Vancouver</div>
+                    <h3>Experiência de Observação de Baleias Selvagens - Embarcação ao Ar Livre</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,9</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(153)</span>
+                    </div>
+                    <p>a partir de R$ 809 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-9"></div>
+                    <div class="local-trip">Reykjavik</div>
+                    <h3>Northern Lights Small Group Tour com chocolate quente e fotos</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>4,8</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(1.201)</span>
+                    </div>
+                    <p>a partir de R$ 809 por adulto</p>
+                </div>
+
+                <div class="catalogue-options-info-box">
+                    <div class="catalogue-options-img" id="what-to-do-now-img-10"></div>
+                    <div class="local-trip">Kyoto</div>
+                    <h3>Kyoto Ghost Tour: Dark Tales, Urban Legends, Bamboo Forest Night</h3>
+                    <div class="avaliation-info-catalogue">
+                        <span>5,0</span>
+                        <div class="avaliation-dots-container">
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                            <div class="avaliation-dot full"></div>
+                        </div>
+                        <span>(456)</span>
+                    </div>
+                    <p>a partir de R$ 263 por adulto</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proposal-trip">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h2>Sua próxima viagem está esperando</h2>
+                    <h3>Viagens de fim de semana saindo de Brusque</h3>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-img" id="proposal-trip-img-1">
+                    <span>Gramado, RS</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-2">
+                    <span>Curitiba, PR</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-3">
+                    <span>Porto Alegre, RS</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="proposal-trip">
+            <div class="catalogue-nav">
+                <div class="catalogue-nav-info">
+                    <h3>Lugares icônicos que você precisa ver</h3>
+                </div>
+
+                <div class="catalogue-nav-btns">
+                    <button id="prev-catalogue-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-catalogue-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="catalogue-options-info">
+                <div class="catalogue-options-img" id="proposal-trip-img-4">
+                    <span>Roma, Itália</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-5">
+                    <span>Paris, França</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-6">
+                    <span>Las Vegas, NV</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-7">
+                    <span>Reykjavik, Islândia</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-8">
+                    <span>Londres, UK</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-9">
+                    <span>Florença, Itália</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-10">
+                    <span>Nova York, NY</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-11">
+                    <span>Barcelona, Espanha</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-12">
+                    <span>Dubai, Emirados Árabes</span>
+                </div>
+                <div class="catalogue-options-img" id="proposal-trip-img-13">
+                    <span>Queenstown, Nova Zelândia</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="award-area">
+            <div id="award-text">
+                <img src="assets/best.svg" id="stamp-img" alt="">
+                <h2>Prêmio Travellers’ Choice Os melhores dos melhores</h2>
+                <p>Entre o 1% dos melhores destinos, acomodações, restaurantes e experiências, decidido por vocês.</p>
+                <a class="light-btn" href="#">Veja os vencedores</a>
+            </div>
+            <div id="award-img"></div>
+        </section>
+
+        <footer id="footer-area">
+            <div class="footer-container">
+                <div class="footer-subcontainer">
+                    <div class="footer-column">
+                        <h3>Sobre o Tripadvisor</h3>
+                        <a href="">Quem somos</a>
+                        <a href="">Imprensa</a>
+                        <a href="">Recursos e políticas</a>
+                        <a href="">Carreiras</a>
+                        <a href="">Segurança e confiança</a>
+                        <a href="">Fale conosco</a>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Explore</h3>
+                        <a href="">Faça uma avaliação</a>
+                        <a href="">Adicione um local</a>
+                        <a href="">Inscreva-se </a>
+                        <a href="">Travellers' Choice</a>
+                        <a href="">Central de ajuda</a>
+                        <a href="">Histórias de viagem</a>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Faça negócios conosco</h3>
+                        <a href="">Proprietários</a>
+                        <a href="">Pacote Premium</a>
+                        <a href="">Anúncios patrocinados</a>
+                        <a href="">Anuncie conosco</a>
+                        <a href="">Acesse nossa API de conteúdo</a>
+
+                        <h3>Baixe o aplicativo</h3>
+                        <a href="">Aplicativo para iPhone</a>
+                        <a href="">Aplicativo para Android</a>
+                    </div>
+                </div>
+                
+                <div class="footer-subcontainer">
+                    <div class="footer-column">
+                        <h3>Sites do Tripadvisor</h3>
+                        <p>Reserve nos melhores restaurantes com <span>TheFork</span></p>
+                        <p>Compre ingressos de excursões e atrações na <span>Viator</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-container">
+                <div id="footer-brand-adviser-container">
+                    <div class="footer-enterprise-info-container">
+                        <div id="footer-logo-img">
+                            <img src="assets/logo (1).svg" alt="">
+                        </div>
+                        <div id="footer-enterprises-copyright-container">
+                            <span>© 2025 Tripadvisor LLC Todos os direitos reservados.</span>
+                            <div id="footer-enterprises-links-container">
+                                <a href="#">Termos de uso
+                                <a href="#">Política de privacidade e cookies</a>
+                                <a href="#">Permissão para instalação de cookies</a>
+                                <a href="#">Mapa do site</a>
+                                <a href="#">Como o site funciona</a>
+                                <a href="#">Fale conosco</a>
+                                <a href="#">Política de acessibilidade</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-enterprises-info-container">
+                        <p>Esta é a versão do nosso site para quem fala Português em Brasil. Se você mora em outro lugar, selecione a versão apropriada do Tripadvisor para seu país ou região no menu suspenso...</p>
+
+                        <a href="#">Leia Mais <i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+
+                <div id="footer-location-options-container">
+                    <div id="footer-select-container">
+                        <select id="coin-user">
+                            <button>
+                                <selectedcontent></selectedcontent>
+                                <span class="picker"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <option value="brl">R$ BRL</option>
+                            <option value="us">$ US</option>
+                            <option value="eur">€ EUR</option>
+                            <option value="gbp">£ GBP</option>
+                            <option value="jpy">¥ JPY</option>
+                        </select>
+
+                        <select id="location-user">
+                            <button>
+                                <selectedcontent></selectedcontent>
+                                <span class="picker"><i class="fa-solid fa-chevron-down"></i></span>
+                            </button>
+                            <option value="br">Brasil</option>
+                            <option value="usa">United States</option>
+                            <option value="esp">Spain</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="jpn">Japan</option>
+                        </select>
+                    </div>
+
+                    <div id="social-media-container">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

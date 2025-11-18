@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora V2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Mediana</h1>
+        <div class="calculator">
+            <input type="text" id="display" disabled placeholder="Para de fingir que sabe e coloca a conta aqui &#128071;">
+            <div class="calculator-btn-container">
+                <button onclick="clean()" class="emphasisBtn">C</button>
+                <button onclick="insertOnDisplay('(')" class="emphasisBtn">(</button>
+                <button onclick="insertOnDisplay(')')" class="emphasisBtn">)</button>
+                <button onclick="delElement()" class="emphasisBtn">&#9003;</button>
+                <button onclick="insertOnDisplay('*')" class="emphasisBtn">X</button>
+                <button onclick="insertOnDisplay('**0.5')" class="emphasisBtn">&#8730;</button>
+                <button onclick="insertOnDisplay('7')">7</button>
+                <button onclick="insertOnDisplay('8')">8</button>
+                <button onclick="insertOnDisplay('9')">9</button>
+                <button onclick="insertOnDisplay('/')" class="emphasisBtn">&#247;</button>
+                <button onclick="insertOnDisplay('**2')" class="emphasisBtn">x&sup2</button>
+                <button onclick="insertOnDisplay('4')">4</button>
+                <button onclick="insertOnDisplay('5')">5</button>
+                <button onclick="insertOnDisplay('6')">6</button>
+                <button onclick="insertOnDisplay('+')" class="emphasisBtn">+</button>
+                <button onclick="insertOnDisplay('**')" class="emphasisBtn">x<sup>y</sup></button>
+                <button onclick="insertOnDisplay('1')">1</button>
+                <button onclick="insertOnDisplay('2')">2</button>
+                <button onclick="insertOnDisplay('3')">3</button>
+                <button onclick="insertOnDisplay('-')" class="emphasisBtn">-</button>
+                <button onclick="insertOnDisplay('.')" class="emphasisBtn">.</button>
+                <button onclick="insertOnDisplay('0')" id="zeroBtn" class="emphasisBtn">0</button>
+                <button onclick="result()" id="equalBtn" class="emphasisBtn">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
