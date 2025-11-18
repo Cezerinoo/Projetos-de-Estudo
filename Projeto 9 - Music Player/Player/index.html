@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <div class="player-box">
+        <div class="player-top-bar">
+            <i class="fa-solid fa-chevron-down"></i>
+
+            <h3>Tocando agora</h3>
+
+            <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="assets/luan-1.jpg">
+        </div>
+
+        <audio id="audio" src="assets/boa.mp3"></audio>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="player-text">
+            <p class="title-music">Boa Memória</p>
+            <p class="artist-music-text">Luan Santana</p>
+        </div>
+
+        <div class="player-bottom-bar">
+            <i class="fa-solid fa-layer-group"></i>
+            <div class="bottom-bar-list">
+                <i class="fa-solid fa-angles-left"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-angles-right"></i>
+            </div>
+            <i class="fa-solid fa-shuffle"></i>
+        </div>
+    </div>
+
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playBtn = document.querySelector('.fa-play');
+        const img = document.querySelector('.player-box img');
+
+        let angle = 0;
+        let rotating = false;
+        let animationFrameId;
+
+        function rotateImage() {
+            if (!rotating) return;
+            angle += 0.2; // velocidade de rotação
+            img.style.transform = `rotate(${angle}deg)`;
+            animationFrameId = requestAnimationFrame(rotateImage);
+        }
+
+        const imageWrapper = document.querySelector('.image-wrapper');
+
+        playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.classList.replace('fa-play', 'fa-pause');
+            rotating = true;
+            lastTimestamp = null;
+            animationFrameId = requestAnimationFrame(rotateImage);
+
+        } else {
+            audio.pause();
+            playBtn.classList.replace('fa-pause', 'fa-play');
+            rotating = false;
+            cancelAnimationFrame(animationFrameId);
+            lastTimestamp = null;
+
+            // Remover onda extra ao pausar
+            const waveDiv = imageWrapper.querySelector('.wave');
+            if (waveDiv) {
+            waveDiv.remove();
+            }
+        }
+        });
+
+        // Atualizar progresso (já estava no outro script)
+        const progress = document.getElementById('progress');
+        const progressContainer = document.getElementById('progress-container');
+
+        audio.addEventListener('timeupdate', () => {
+            const { duration, currentTime } = audio;
+            const percent = (currentTime / duration) * 100;
+            progress.style.width = percent + '%';
+        });
+
+        progressContainer.addEventListener('click', (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            audio.currentTime = (clickX / width) * duration;
+        });
+
+        audio.addEventListener('ended', () => {
+            playBtn.classList.remove('fa-pause');
+            playBtn.classList.add('fa-play');
+            rotating = false;
+            cancelAnimationFrame(animationFrameId);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="trailer-modal" id="trailerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="video-container">
+                <iframe id="trailerVideo" src="" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav id="nav-container">
+            <div id="logo">
+                <img src="../assets/Logonetflix.png" alt="Netflix logo">
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <div id="nav-links">
+                <a href="#">Principal</a>
+                <a href="#">Seriados</a>
+                <a href="#">Filmes</a>
+                <a href="#">Gêneros</a>
+                <a href="#">Crianças</a>
+            </div>
+
+            <div id="nav-tools">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </nav>
+
+        <div id="principal-banner">
+            <div class="banner-info">
+                <div class="netflix-ref">
+                    <img src="../assets/netflix.png" alt="">
+                    <span>Series</span>
+                </div>
+
+                <img id="logo-banner" src="../assets/logo-3.webp" alt="Peaky Blinders logo">
+                
+                <div class="banner-alerts">
+                    <span>2013</span> |
+                    <span class="age-alert">A16</span> |
+                    <span>6 Temporadas</span> |
+                    <span>Drama</span>
+                </div>
+            
+                <p class="text-banner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quae quia quisquam consequatur. Aperiam facere dolor esse, commodi illo voluptates mollitia maiores maxime soluta hic placeat consequuntur laborum eveniet dolores.</p>
+
+                <div class="buttons">
+                    <button class="play-btn"><span><i class="fa-solid fa-play"></i></span>Assistir agora</button>
+                    <button class="trailer-btn" id="openTrailer">Ver o trailer</button>
+                </div>
+            </div>
+            
+            <div id="emphasis-img"></div>
+        </div>
+
+        <div id="announcement-container">
+            <div class="announcement-text">
+                <h3>A era Shelby chegou:</h3>
+                <p>Tá rolando sorteio exclusivo de canecas do Peaky Blinders para os verdadeiros fãs da família Shelby.
+Responda o quiz, participe e garanta a sua!</p>
+            </div>
+
+            <div></div>
+
+            <div id="annoucement-products">
+                <img src="../assets/canecas.png" alt="">
+                <i class="fa-regular fa-square-plus"></i>
+                <img src="../assets/boina.jpg" alt="">
+            </div>
+
+            <div id="annoucement-button">
+                <button class="play-btn">Acesse o quiz</button>
+            </div>
+        </div>
+
+        <div class="catalogues-container">
+            <h3>Recomendados pra você</h3>
+            <div class="sash-content">
+                <div class="content-img" id="recommended-film-1"></div>
+                <div class="content-img" id="recommended-film-2"></div>
+                <div class="content-img" id="recommended-film-3"></div>
+                <div class="content-img" id="recommended-film-4"></div>
+                <div class="content-img" id="recommended-film-5"></div>
+                <div class="content-img" id="recommended-film-6"></div>
+            </div>
+
+            <h3>Top 10</h3>
+            <div class="sash-content">
+                <div class="content-img" id="top-10-film-1"></div>
+                <div class="content-img" id="top-10-film-2"></div>
+                <div class="content-img" id="top-10-film-3"></div>
+                <div class="content-img" id="top-10-film-4"></div>
+                <div class="content-img" id="top-10-film-5"></div>
+                <div class="content-img" id="top-10-film-6"></div>
+            </div>
+
+            <h3>Novos na plataforma</h3>
+            <div class="sash-content">
+                <div class="content-img" id="releases-film-1"></div>
+                <div class="content-img" id="releases-film-2"></div>
+                <div class="content-img" id="releases-film-3"></div>
+                <div class="content-img" id="releases-film-4"></div>
+                <div class="content-img" id="releases-film-5"></div>
+                <div class="content-img" id="releases-film-6"></div>
+                
+            </div>
+        </div>
+
+        <div class="avaliation-container">
+            <div class="text-area">
+                <h3>O que você acha?</h3>
+                <p>Olá! Estamos sempre buscando melhorar a experiência dentro da nossa plataforma, e a sua opinião pode fazer toda a diferença.</p>
+                <p>Você pode nos ajudar deixando uma avaliação rápida? Vai levar menos de 1 minuto e vai contribuir muito para que possamos trazer novidades cada vez melhores para você.</p>
+
+                <div class="sorteio-container">
+                    <h4>Sorteio de 1 ano <span>Netflix</span> grátis!</h4>
+                    <p>Você receberá um código no email com todas as informações.</p>
+                </div>
+            </div>
+
+            <div class="avaliation-area">
+                <div class="avaliation-wrapper">
+                    <div class="avaliation-box" id="avaliation-1">
+                        <i class="fa-regular fa-face-laugh-beam"></i>
+                        <span>Ótimo</span>
+                    </div>
+                    <div class="avaliation-box" id="avaliation-2">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <span>Bom</span>
+                    </div>
+                    <div class="avaliation-box" id="avaliation-3">
+                        <i class="fa-regular fa-face-meh"></i>
+                        <span>Mediano</span>
+                    </div>
+                    <div class="avaliation-box" id="avaliation-4">
+                        <i class="fa-regular fa-face-tired"></i>
+                        <span>Péssimo</span>
+                    </div>
+                </div>
+                
+                <textarea id="user-avaliation" placeholder="Escreva aqui!"></textarea>
+
+                <button class="play-btn"><span><i class="fa-solid fa-paper-plane"></i></span>Enviar avaliação</button>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-links">
+                <h4>Navegar</h4>
+                <a href="#">Principal</a>
+                <a href="#">Seriados</a>
+                <a href="#">Filmes</a>
+                <a href="#">Gêneros</a>
+                <a href="#">Crianças</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Organização</h4>
+                <a href="#">Termos</a>
+                <a href="#">Segurança</a>
+                <a href="#">Políticas de cancelamento</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Contate-nos</a>
+                <a href="#">Atendimento por IA</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+         // Trailer Modal functionality
+        const trailerModal = document.getElementById('trailerModal');
+        const openTrailerBtn = document.getElementById('openTrailer');
+        const closeModalBtn = document.getElementById('closeModal');
+        const trailerVideo = document.getElementById('trailerVideo');
+        const body = document.body;
+
+        // YouTube video ID from the URL
+        const youtubeVideoId = 'oVzVdvGIC7U';
+
+        // Open modal function
+        function openTrailerModal() {
+            // Set the YouTube embed URL with autoplay
+            trailerVideo.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0&modestbranding=1`;
+            
+            // Show modal and prevent body scroll
+            trailerModal.classList.add('active');
+            body.classList.add('modal-open');
+        }
+
+        // Close modal function
+        function closeTrailerModal() {
+            // Hide modal and allow body scroll
+            trailerModal.classList.remove('active');
+            body.classList.remove('modal-open');
+            
+            // Stop the video by removing the src
+            setTimeout(() => {
+                trailerVideo.src = '';
+            }, 300);
+        }
+
+        // Event listeners
+        openTrailerBtn.addEventListener('click', openTrailerModal);
+        closeModalBtn.addEventListener('click', closeTrailerModal);
+
+        // Close modal when clicking on the background
+        trailerModal.addEventListener('click', function(e) {
+            if (e.target === trailerModal) {
+                closeTrailerModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && trailerModal.classList.contains('active')) {
+                closeTrailerModal();
+            }
+        });
+    </script>
+</body>
+</html>
